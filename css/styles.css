@@ -1,0 +1,111 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+}
+
+#sidebar {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+#sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.marker {
+    width: 30px;
+    height: 30px;
+    margin: 5px 0;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: background-color 0.3s;
+}
+
+.marker:hover {
+    background-color: #555;
+}
+
+#main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+#toolbar {
+    margin-bottom: 20px;
+}
+
+#toolbar input[type="color"],
+#toolbar input[type="range"] {
+    margin-right: 10px;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    cursor: crosshair;
+}
+
+#toolbar button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#toolbar button:hover {
+    background-color: #0056b3;
+}
+
+
+
+@media (max-width: 767px) {
+    /* Responsive styles for mobile phones and iPad devices */
+    body {
+        font-size: 14px; 
+    }
+
+    #sidebar {
+        width: 100%; 
+        box-shadow: none; 
+    }
+
+    #main {
+        padding: 10px; 
+    }
+
+    #toolbar button {
+        padding: 6px 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Styles for iPad devices */
+    body {
+        font-size: 16px; 
+    }
+}
